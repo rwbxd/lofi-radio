@@ -1,0 +1,163 @@
+:root {
+}
+
+body {
+  height: 100vh;
+  width: auto;
+  overflow: hidden;
+  color: white;
+  font-family: "Pacifico", "Brush Script MT";
+}
+
+.bluegrad {
+  background-image: linear-gradient(to bottom, #159957, #155799);
+  background-color: blue;
+}
+
+.redgrad {
+  background-image: linear-gradient(to bottom, rgb(255,50,30), rgb(255,50,90));
+  background-color: red;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+      "navbtn header colorbtn"
+      "skipbtn player skipbtn"
+      "controlrow controlrow controlrow";
+  text-align: center;
+  font-size: 16vmin;
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+a {
+  color: white;
+}
+
+button {
+  border: none;
+  background-color: rgb(0,0,0,0%);
+  color: white;
+  outline: 0;
+  cursor: pointer;
+}
+
+#navbar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top:0;
+  left:0;
+  background-color: rgb(200,200,200,15%);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: .5s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+}
+
+#toprow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#playerrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#controlrow {
+  display: flex;
+  justify-content: center;
+  grid-area: "controlrow";
+}
+
+#navcontent {
+  top: 10%;
+  left: 10%;
+  padding-top: 70px;
+}
+
+#gradient_selector {
+  grid-area: "colorbtn";
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+#openbtn {
+  font-size: 6vmin;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 0;
+  transition: opacity .3s ease-out;
+}
+
+#closebtn {
+  text-align: center;
+  font-size: 6vmin;
+  padding: 10px 15px;
+  border: 2px solid rgb(50,50,50,25%);
+  border-radius: 50%;
+  height: 10vmin;
+  width: 10vmin;
+}
+
+#player {
+  height: 50vh;
+  width: 50vw;
+}
+
+#previous, #next {
+  font-size: 16vmin;
+  font-family: "Trebuchet MS";
+  grid-area: "skipbtn";
+}
+
+#play {display: none;}
+
+#controlrow button {
+  font-size: 8vmin;
+}
+
+#volumeslider {
+  height: 25%;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  border-radius: 50%;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  border-radius: 50%;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: lightgray; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border: none;
+}
+
+#mute {display: none}
+
+#rwb {
+  font-size: 2vmin;
+  position: absolute;
+  bottom: 0px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by rwbxd</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Pacifico&display=swap" rel="stylesheet">
+
+<nav id="navbar">
+  <nav id="navcontent">
+    <button id="closebtn" class="closebtn" onclick="closeNav()">X</button>
+    <div id="sources">
+      <p>Sources</p>
+      <p>To be built...</p>
+    </div>
+  </nav>
+</nav>
+
+<main id="main">
+  <div id="toprow">
+    <button id="openbtn" onclick="openNav()">&#9776;</button>
+    <header id="header">Lofi Radio</header>
+    <button id="gradient_selector" onclick="nextGrad()"></button>
+  </div>
+  <div id="playerrow">
+    <button id="previous" onclick="player.previousVideo()">&#9198;</button>
+    <div id="playerwrapper">
+      <div id="player"></div>
+    </div>
+    <button id="play"></button>
+    <button id="next" onclick="player.nextVideo()">&#9197;</button>
+  </div>
+  <div id="controlrow">
+    <button id="mute" onclick="toggleMute()">&#128263;</button>
+    <input class="slider" id="volumeslider" type="range" min="0" max="100" step="1" value="50" oninput="player.setVolume(this.value)" onchange="player.setVolume(this.value)"></input>
+  </div>
+  <div id="rwb">
+    <p>Made with &lt;3 by rwbxd - <a href="https://www.github.com/rwbxd">GitHub</a> - 
+    <a href="https://www.linkedin.com/in/rwilliambryan">LinkedIn</a></p>
+  </div>
+</main>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
