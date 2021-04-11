@@ -28,19 +28,18 @@
     <button id="gradient_selector" onclick="nextGrad()"></button>
   </div>
   <div id="playerrow">
-    <button id="previous" onclick="player.previousVideo()">&#9198;</button>
+    <button id="previous" onclick="prevVid()">&#9198;</button>
     <div id="playerwrapper">
       <div id="player"></div>
     </div>
     <button id="play"></button>
-    <button id="next" onclick="player.nextVideo()">&#9197;</button>
+    <button id="next" onclick="nextVid()">&#9197;</button>
   </div>
   <div id="controlrow">
-    <button id="mute" onclick="toggleMute()">&#128263;</button>
     <input class="slider" id="volumeslider" type="range" min="0" max="100" step="1" value="50" oninput="player.setVolume(this.value)" onchange="player.setVolume(this.value)"></input>
   </div>
   <div id="rwb">
-    <p>Made with &lt;3 by rwbxd - <a href="https://www.github.com/rwbxd">GitHub</a> - 
+    <p>Made by rwbxd - <a href="https://www.github.com/rwbxd">GitHub</a> - 
     <a href="https://www.linkedin.com/in/rwilliambryan">LinkedIn</a></p>
   </div>
 </main>
